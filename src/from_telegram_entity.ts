@@ -11,38 +11,38 @@ import { processEntity } from "./util/process_entity";
  * @returns {Root} tgast tree.
  */
 export function fromTelegramEntity(value: VFile | Partial<Message>): Root {
-	const message = {
-		text:
-			"text" in value ? value.text : "caption" in value ? value.caption : "",
-		entities:
-			"entities" in value
-				? value.entities
-				: "caption_entities" in value
-					? value.caption_entities
-					: [],
-	};
+  const message = {
+    text:
+      "text" in value ? value.text : "caption" in value ? value.caption : "",
+    entities:
+      "entities" in value
+        ? value.entities
+        : "caption_entities" in value
+          ? value.caption_entities
+          : [],
+  };
 
-	message.text ??= "";
-	message.entities ??= [];
+  message.text ??= "";
+  message.entities ??= [];
 
-	// Ensure entities are in offset order.
-	// (Defensive measure, Telegram API should provide this)
-	message.entities.sort((a, b) => a.offset - b.offset);
+  // Ensure entities are in offset order.
+  // (Defensive measure, Telegram API should provide this)
+  message.entities.sort((a, b) => a.offset - b.offset);
 
-	const text = message.text.normalize("NFC");
-	const children = processEntity({
-		textMsg: text,
-		entities: message.entities,
-		position: {
-			start: 0,
-			end: text.length,
-		},
-	});
-	const position = getNodePosition(text, { start: 0, end: text.length });
+  const text = message.text.normalize("NFC");
+  const children = processEntity({
+    textMsg: text,
+    entities: message.entities,
+    position: {
+      start: 0,
+      end: text.length,
+    },
+  });
+  const position = getNodePosition(text, { start: 0, end: text.length });
 
-	return {
-		type: "root",
-		children,
-		position,
-	};
+  return {
+    type: "root",
+    children,
+    position,
+  };
 }

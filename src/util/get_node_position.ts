@@ -11,36 +11,36 @@ import type { Position } from "unist";
  * @returns Position in text.
  */
 export function getNodePosition(
-	text: string,
-	options: { start: number; end: number } | MessageEntity,
+  text: string,
+  options: { start: number; end: number } | MessageEntity,
 ): Position {
-	let offset: number;
-	let length: number;
+  let offset: number;
+  let length: number;
 
-	if ("start" in options && "end" in options) {
-		// Options with explicit start and end
-		offset = options.start;
-		length = options.end;
-	} else {
-		// Options as MessageEntity with offset and length
-		offset = options.offset;
-		length = offset + options.length;
-	}
+  if ("start" in options && "end" in options) {
+    // Options with explicit start and end
+    offset = options.start;
+    length = options.end;
+  } else {
+    // Options as MessageEntity with offset and length
+    offset = options.offset;
+    length = offset + options.length;
+  }
 
-	const ast: Position = {
-		start: {
-			...indexToPosition(text, offset, { oneBased: true }),
-			offset: offset,
-		},
-		end: {
-			...indexToPosition(text, length - 1, {
-				oneBased: true,
-			}),
-			offset: length,
-		},
-	};
+  const ast: Position = {
+    start: {
+      ...indexToPosition(text, offset, { oneBased: true }),
+      offset: offset,
+    },
+    end: {
+      ...indexToPosition(text, length - 1, {
+        oneBased: true,
+      }),
+      offset: length,
+    },
+  };
 
-	ast.end.column++;
+  ast.end.column++;
 
-	return ast;
+  return ast;
 }
