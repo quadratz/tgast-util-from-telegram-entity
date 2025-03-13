@@ -1,0 +1,55 @@
+{
+  "name": "tgast-util-from-telegram-entity",
+  "description": "tgast utility to parse telegram entity",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": false,
+  "repository": "https://github.com/quadratz/tgast-util-from-telegram-entity",
+  "bugs": "https://github.com/quadratz/tgast-util-from-telegram-entity/issues",
+  "keywords": [
+    "telegram",
+    "bot",
+    "api",
+    "entity",
+    "entities",
+    "ast",
+    "syntax",
+    "tree",
+    "tgast",
+    "tgast-util",
+    "unified",
+    "unifiedjs",
+    "unified.js",
+    "unist",
+    "util",
+    "utility"
+  ],
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "check": "biome check",
+    "fix": "biome check --write",
+    "test": "bun test --bail"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@grammyjs/types": "^3.19.0",
+    "@types/bun": "latest",
+    "tgast": "^1.1.0",
+    "vfile": "^6.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "index-to-position": "^1.0.0"
+  },
+  "files": [
+    "index.ts",
+    "src/**/*",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
+}
