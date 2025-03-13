@@ -4,14 +4,14 @@
     "": {
       "name": "tgast-util-from-telegram-entity",
       "dependencies": {
+        "@grammyjs/types": "^3.19.0",
         "index-to-position": "^1.0.0",
+        "tgast": "^1.1.0",
+        "vfile": "^6.0.3",
       },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
-        "@grammyjs/types": "^3.19.0",
         "@types/bun": "latest",
-        "tgast": "^1.1.0",
-        "vfile": "^6.0.3",
       },
       "peerDependencies": {
         "typescript": "^5",
