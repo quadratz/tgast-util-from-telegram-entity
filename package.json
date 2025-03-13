@@ -1,6 +1,6 @@
 {
   "name": "tgast-util-from-telegram-entity",
-  "description": "tgast utility to parse telegram entity",
+  "description": "tgast utility to parse telegram entity.",
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
