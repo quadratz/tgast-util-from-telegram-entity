@@ -23,7 +23,7 @@ ecosystem instead.
 npm install tgast-util-from-telegram-entity 
 ```
 
-# Use
+## Use
 
 Say we have the following [telegram entity][tg-entity]:
 
