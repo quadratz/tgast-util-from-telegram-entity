@@ -8,7 +8,7 @@ This package is a utility that takes [telegram entity][tg-entity] input and turn
 [tgast][github-tgast] syntax tree.
 
 This package is used inside [`regram-parse`][github-regram-parse],
-which focusses on making it easier to transform content by abstracting these
+which focuses on making it easier to transform content by abstracting these
 internals away.
 
 ## When should I use this?
@@ -62,7 +62,7 @@ const tree = fromTelegramEntity(telegramEntity as Partial<Message>);
 console.log(tree);
 ```
 
-…now the `console.log(tree)` will yields:
+…now the `console.log(tree)` will yield:
 
 ```ts
 {
