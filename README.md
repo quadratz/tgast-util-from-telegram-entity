@@ -1,26 +1,25 @@
 # tgast-util-from-telegram-entity
 
-**[tgast][github-tgast]** utility that turns [telegram entity][tg-entity] into a syntax tree.
+**[tgast][github-tgast]** utility that turns [telegram entity][tg-entity] into a
+syntax tree.
 
 ## What is this?
 
-This package is a utility that takes [telegram entity][tg-entity] input and turns it into an
-[tgast][github-tgast] syntax tree.
+This package is a utility that takes [telegram entity][tg-entity] input and
+turns it into an [tgast][github-tgast] syntax tree.
 
-This package is used inside [`regram-parse`][github-regram-parse],
-which focuses on making it easier to transform content by abstracting these
-internals away.
+This package is used inside [`regram-parse`][github-regram-parse], which focuses
+on making it easier to transform content by abstracting these internals away.
 
 ## When should I use this?
 
-If you want to handle syntax trees manually, use this.
-For an easier time processing content, use the **[regram][github-regram]**
-ecosystem instead.
+If you want to handle syntax trees manually, use this. For an easier time
+processing content, use the **[regram][github-regram]** ecosystem instead.
 
 ## Install
 
 ```sh
-npm install tgast-util-from-telegram-entity 
+npm install tgast-util-from-telegram-entity
 ```
 
 ## Use
@@ -34,9 +33,9 @@ Say we have the following [telegram entity][tg-entity]:
     {
       "offset": 0,
       "length": 20,
-      "type": "bold",
-    },
-  ],
+      "type": "bold"
+    }
+  ]
 }
 ```
 
@@ -119,8 +118,7 @@ console.log(tree);
 
 ## Related
 
-* [`regram`][github-regram]
-  — process telegram entity
+- [`regram`][github-regram] — process telegram entity
 
 [github-regram]: https://github.com/quadratz/regram
 [github-regram-parse]: https://github.com/quadratz/regram-parse
