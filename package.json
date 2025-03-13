@@ -33,16 +33,16 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@grammyjs/types": "^3.19.0",
-    "@types/bun": "latest",
-    "tgast": "^1.1.0",
-    "vfile": "^6.0.3"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
   "dependencies": {
-    "index-to-position": "^1.0.0"
+    "@grammyjs/types": "^3.19.0",
+    "index-to-position": "^1.0.0",
+    "tgast": "^1.1.0",
+    "vfile": "^6.0.3"
   },
   "files": [
     "index.ts",
