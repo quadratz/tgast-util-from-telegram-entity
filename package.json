@@ -1,7 +1,7 @@
 {
   "name": "tgast-util-from-telegram-entity",
   "description": "tgast utility to parse telegram entity.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "private": false,
   "repository": "https://github.com/quadratz/tgast-util-from-telegram-entity",
